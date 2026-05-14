@@ -1,0 +1,17 @@
+{
+    "electra": {
+        "hf_model": "AILabTUL/mELECTRA",
+        "trained_model":"../models/electra"
+    },
+    
+    "mbert_dist":{
+        "hf_model":"distilbert/distilbert-base-multilingual-cased",
+        "trained_model":"../models/mbert_dist"
+    },
+    "mdeberta":{
+        "hf_model":"microsoft/mdeberta-v3-base",
+        "trained_model":"../models/mdeberta"
+    }
+
+
+}

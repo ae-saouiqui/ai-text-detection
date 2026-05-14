@@ -1,0 +1,4 @@
+dataset/*
+.env
+models/*
+scripts/__pycache__/*

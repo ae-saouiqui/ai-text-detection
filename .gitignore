@@ -1,6 +1,6 @@
-dataset/
 .env
 models/*
 scripts/__pycache__/*
-!dataset/stopwords/
-!dataset/stopwords/**
+dataset/fr/
+dataset/en/
+dataset/multilinguinal/

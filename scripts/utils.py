@@ -21,7 +21,7 @@ def plotter(title,xlabel,ylabel,grid,file):
             func(*args,**kwargs)
             plt.xlabel(xlabel)
             plt.ylabel(ylabel)
-            if (handles:= plt.gca().get_legend_handles_labels()[0]):
+            if plt.gca().get_legend_handles_labels()[0]:
                 plt.legend()
             plt.grid(grid)
             result_folder = kwargs["result_folder"] 

@@ -11,7 +11,13 @@
     "mdeberta":{
         "hf_model":"microsoft/mdeberta-v3-base",
         "trained_model":"../models/mdeberta"
+    },
+    "xlm-r":{
+        "hf_model":"FacebookAI/xlm-roberta-base",
+        "trained_model":"../models/xlm_r"
+    },
+    "mbert_lora":{
+        "hf_model":"distilbert-base-multilingual-cased",
+        "trained_model":"../models/mbert_lora"
     }
-
-
 }

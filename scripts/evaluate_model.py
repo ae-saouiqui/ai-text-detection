@@ -16,10 +16,10 @@ import torch
 from sklearn.metrics import (
     roc_curve,
     auc,
-    precision_recall_curve
+    classification_report
 )
 
-from utils import plot_roc_curve,plot_pr_curve,plot_pb_distro,plot_confusion_matrix
+from utils import plot_roc_curve,plot_confusion_matrix
 import json
 from tqdm import tqdm
 from torch.utils.data import DataLoader
@@ -29,22 +29,7 @@ test_path  = Path(os.getenv("TEST_PATH"))
 FORMAT = os.getenv("FORMAT")
 result_path = Path("../results")
 
-def find_best_threshold(y_true, y_probs):
-    precision, recall, thresholds = precision_recall_curve(y_true, y_probs)
 
-    f1_scores = 2 * (precision[:-1] * recall[:-1]) / (
-        precision[:-1] + recall[:-1] + 1e-8
-    )
-
-    best_idx = np.argmax(f1_scores)
-
-    return {
-        "precision":precision.tolist(),
-        "recall":recall.tolist(),
-        "thresholds": thresholds.tolist(),
-        "best_threshold": float(thresholds[best_idx]),
-        "best_f1": float(f1_scores[best_idx])
-    }
 
 
 
@@ -55,7 +40,6 @@ def evaluate_per_lang(mask,metrics):
     )
 
     fpr, tpr, _ = roc_curve(y_true[mask], y_probs[mask])
-    precision, recall, _ = precision_recall_curve(y_true[mask], y_probs[mask])
     roc_auc = auc(fpr, tpr)
 
     res.update({"roc_auc": float(roc_auc)})
@@ -65,7 +49,7 @@ def evaluate_per_lang(mask,metrics):
 
 
 
-parser = ArgumentParser()\
+parser = ArgumentParser()
 
 parser.add_argument(
     "--model",
@@ -89,10 +73,15 @@ args = parser.parse_args()
 try :
     with open("../configs/model_map.json","r") as file :
         models = json.load(file)
+    # load the threshold 
+    with open(result_path / "threhsolds.json","r") as f:
+        thresholds = json.load(f)
 
     base = models[args.model]["trained_model"]
+    threshold = thresholds[args.model]
     model_name = base + "/" + args.checkpoint if args.checkpoint else base
     # load the dataset 
+
 
     print("Load the test data")
     raw_data = load_dataset(
@@ -155,25 +144,23 @@ try :
         probs = torch.softmax(logits, dim=1)
 
         ai_probs = probs[:, 1]
-        preds = torch.argmax(probs, dim=1)
+        preds = (ai_probs > threshold).int()
+        y_probs.extend(ai_probs.cpu().numpy())
         y_pred.extend(preds.cpu().numpy())
         y_true.extend(labels.cpu().numpy())
-        y_probs.extend(ai_probs.cpu().numpy())
 
     y_true = np.array(y_true)
     y_pred = np.array(y_pred)
     y_probs = np.array(y_probs)
     langs = np.array(langs)
 
-
     print("Compute metrics")
     results = metrics.compute(
         references = y_true,
         predictions = y_pred
     )
-    
+
     fpr,tpr,_ = roc_curve(y_true,y_probs)
-    threshold_info = find_best_threshold(y_true, y_probs)
     roc_auc = auc(fpr, tpr)
     results.update({"roc_auc":float(roc_auc)})  
     en_mask = langs == "en"
@@ -188,18 +175,16 @@ try :
     result_folder.mkdir(parents=True, exist_ok=True)
     print("Plotting results")
     plot_roc_curve(fpr,tpr,roc_auc,result_folder=result_folder)
-    plot_pr_curve(threshold_info["recall"],threshold_info["precision"],result_folder=result_folder)
-    plot_pb_distro(y_true,y_probs,["Human", "AI"],result_folder=result_folder)
     plot_confusion_matrix(y_true,y_pred,result_folder=result_folder)
     print("Saving the results ")
     with open(result_folder / "metrics.json", "w") as f:
         json.dump(all_results, f, indent=4)
-    
-    with open(result_folder / "prt.json","w") as f :
-        json.dump(threshold_info,f,indent=4)
-    
-    print("Test finished")
 
+    print(classification_report(
+        y_true,
+        y_pred
+    ))
+    print("Test finished")
 except KeyError as ke:
     print("The model you are trying to load doesn't exist ")
     print(f"Here is available models {list(models.keys())}")

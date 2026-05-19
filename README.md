@@ -27,11 +27,12 @@ The framework is built around transformer encoder configurations adapted for bin
 
 ---
 
-## Benchmarks
+## Experimental Evaluation
+This framework was developed and used as the core experimental pipeline for our research on multilingual AI-generated text detection. It provides a unified environment for dataset preparation, transformer fine-tuning, threshold optimization, and model evaluation across multiple multilingual transformer architectures.
 
-This framework was used to establish a comprehensive pipeline for fine-tuning transformer models and constructing a benchmarking suite for AI text detection. It served as a central training and evaluation platform, enabling concurrent fine-tuning and performance measurement across distinct transformer configurations subjected to varied optimization recipes.
+Using this framework, we conducted extensive benchmarking experiments on English and French datasets to compare the effectiveness of different transformer-based approaches under a consistent evaluation protocol. The framework also supports parameter-efficient fine-tuning strategies such as LoRA, enabling efficient experimentation across multiple model configurations.
 
-Final performance is reported on a fully held-out test set, with validation boundaries kept strictly fixed throughout training:
+Final performance is reported on a fully held-out test set, while validation boundaries remained strictly isolated throughout training and threshold selection.
 
 | Model Configuration | Accuracy | Precision (AI) | Recall (AI) | F1 (AI) | Precision (Human) | Recall (Human) | F1 (Human) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |

@@ -38,7 +38,7 @@ Final performance is reported on a fully held-out test set, while validation bou
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | `mELECTRA` | 0.78 | 0.77 | 0.85 | 0.81 | 0.80 | 0.69 | 0.74 |
 | `mBERT-Distil` | 0.79 | 0.79 | 0.85 | 0.82 | 0.80 | 0.72 | 0.76 |
-| **`mDistilBERT + LoRA` (Ours)** | **0.80** | **0.79** | **0.87** | **0.82** | **0.82** | **0.72** | **0.76** |
+| **`mDistilBERT + LoRA`** | **0.80** | **0.79** | **0.87** | **0.82** | **0.82** | **0.72** | **0.76** |
 
 For a comprehensive analysis of the methodology, refer to the full paper:
 
@@ -79,10 +79,8 @@ python -m venv det-env
 # Activate the virtual environment
 # On macOS/Linux:
 source det-env/bin/activate
-# On Windows (Command Prompt):
-det-env\Scripts\activate.bat
-# On Windows (PowerShell):
-.\det-env\Scripts\Activate.ps1
+# On Windows :
+det-env\Scripts\activae
 
 # Install core dependencies
 pip install -r requirements.txt

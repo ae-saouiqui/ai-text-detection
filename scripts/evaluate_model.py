@@ -163,14 +163,20 @@ try :
     fpr,tpr,_ = roc_curve(y_true,y_probs)
     roc_auc = auc(fpr, tpr)
     results.update({"roc_auc":float(roc_auc)})  
+
+
+    # Evaluate based on rach language 
     en_mask = langs == "en"
     fr_mask = langs == "fr"
 
+    # Setting the langugaes in a dictionnary
     all_results = {
         "global":results,
         "english":evaluate_per_lang(en_mask,metrics),
         "french":evaluate_per_lang(fr_mask,metrics)
     }
+
+
     result_folder = result_path / args.model / args.checkpoint if args.checkpoint else result_path / args.model
     result_folder.mkdir(parents=True, exist_ok=True)
     print("Plotting results")

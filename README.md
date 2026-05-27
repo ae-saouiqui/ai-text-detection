@@ -227,3 +227,39 @@ python scripts/evaluate_model.py --model model_alias
 # Evaluate a specific intermediate checkpoint
 python scripts/evaluate_model.py --model model_alias --checkpoint checkpoint-2000
 ```
+
+#### Default Language-Specific Metrics
+By default, the script computes and saves metrics for:
+- **Global** (all samples combined)
+- **English** (`lang == "en"`)
+- **French** (`lang == "fr"`)
+
+Results are automatically saved to `results/{model_alias}/metrics.json`.
+
+#### Customizing for Additional Languages
+To evaluate performance on other languages present in your dataset, make two small adjustments in `evaluate_model.py`:
+
+1. **Modify or remove these mask definitions** like `en_mask` and `fr_mask`  based on the languages available in your dataset:
+   ```python
+   # Keep,Update or remove it based on your dataset
+   en_mask = langs == "fr"
+   fr_mask = langs == "en"
+   # Example: Add Spanish and Arabic support
+   es_mask = langs == "es"
+   ar_mask = langs == "ar"
+   ```
+
+2. **Append the new languages to the `all_results` dictionary** using the `evaluate_per_lang` helper:
+   ```python
+   all_results = {
+       "global": results,
+       "english": evaluate_per_lang(en_mask, metrics),
+       "french": evaluate_per_lang(fr_mask, metrics),
+       "spanish": evaluate_per_lang(es_mask, metrics),  # New entry
+       "arabic": evaluate_per_lang(ar_mask, metrics)    # New entry
+   }
+   ```
+
+3. Run the evaluation script as usual. The new language metrics will be automatically computed and saved in `metrics.json`.
+
+> **Note:** Ensure your test dataset contains the `lang` column with the exact language codes you want to filter (e.g., `"es"`, `"ar"`, `"de"`). The evaluation engine will only compute metrics for rows where the mask evaluates to `True`.

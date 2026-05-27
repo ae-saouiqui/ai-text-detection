@@ -266,6 +266,7 @@ To evaluate performance on other languages present in your dataset, make two sma
 
 ---
 
+<!-- to remember  : Github renderer restrict some of css styling like border-radius, that why we used "images.wesery.nl" proxy to bypass the restriction -->
 ## 👥 Contributors
 
 <table align="center" width="100%">
@@ -273,19 +274,22 @@ To evaluate performance on other languages present in your dataset, make two sma
     <tr>
       <td align="center" width="50%">
         <a href="https://github.com/Marouazzz">
-        <!-- to remember  : Github renderer restrict some of css styling like border-radius, that why we used "images.wesery.nl" proxy to bypass the restriction -->
+        <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" height="20" width="1" />
+          <br/>
           <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/173569485?v=4&w=120&h=120&fit=cover&mask=circle" width="120" alt="Marouazzz"/>
           <br/>
           <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" width="350" height="1" />
-          <sub><b>Marouazzz</b></sub>
+          <div><sub><b>Marouazzz</b></sub></div>
         </a>
       </td>
       <td align="center" width="50%">
         <a href="https://github.com/hajaryaz">
+          <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" height="20" width="1" />
+          <br/>
           <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/199246801?v=4&w=120&h=120&fit=cover&mask=circle" width="120" alt="hajaryaz"/>
           <br/>
           <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" width="350" height="1" />
-          <sub><b>hajaryaz</b></sub>
+          <div><sub><b>hajaryaz</b></sub></div>
         </a>
       </td>
     </tr>

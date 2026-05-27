@@ -285,7 +285,6 @@ To evaluate performance on other languages present in your dataset, make two sma
           <sub><b>hajaryaz</b></sub>
         </a>
       </td>
-      <!-- Add more <td> blocks for additional contributors -->
     </tr>
   </tbody>
 </table>

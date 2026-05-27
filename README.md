@@ -1,4 +1,11 @@
 # Multilingual AI-Generated Text Detection Framework
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Transformers](https://img.shields.io/badge/🤗_Transformers-4.30%2B-FFD21E)](https://huggingface.co/docs/transformers)
+[![Paper](https://img.shields.io/badge/📄-Paper-b31b1b)](./Comparative%20Evaluation%20of%20Transformer%20Models%20for%20AI.pdf)
+[![Hugging Face Models](https://img.shields.io/badge/🤗_account-aesaouiqui-FFD21E)](https://huggingface.co/ae-saouiqui)
+[![GitHub](https://img.shields.io/badge/github-Deployment%20Repo-blue?logo=github)](https://github.com/Marouazzz/ai_human_detector)
+
 
 An advanced machine learning framework engineered to distinguish between human-authored and AI-generated text. The architecture focuses on capturing deep semantic and stylistic patterns across **English** and **French** textual data, using optimized transformer architectures and parameter-efficient fine-tuning techniques.
 

@@ -1,11 +1,11 @@
 # Multilingual AI-Generated Text Detection Framework
+![Contributors](https://img.shields.io/badge/contributors-3-blue?logo=github)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Transformers](https://img.shields.io/badge/🤗_Transformers-4.30%2B-FFD21E)](https://huggingface.co/docs/transformers)
 [![Paper](https://img.shields.io/badge/📄-Paper-b31b1b)](./Comparative%20Evaluation%20of%20Transformer%20Models%20for%20AI.pdf)
 [![Hugging Face Models](https://img.shields.io/badge/🤗_account-aesaouiqui-FFD21E)](https://huggingface.co/ae-saouiqui)
 [![GitHub](https://img.shields.io/badge/github-Deployment%20Repo-blue?logo=github)](https://github.com/Marouazzz/ai_human_detector)
-
 
 An advanced machine learning framework engineered to distinguish between human-authored and AI-generated text. The architecture focuses on capturing deep semantic and stylistic patterns across **English** and **French** textual data, using optimized transformer architectures and parameter-efficient fine-tuning techniques.
 
@@ -263,3 +263,29 @@ To evaluate performance on other languages present in your dataset, make two sma
 3. Run the evaluation script as usual. The new language metrics will be automatically computed and saved in `metrics.json`.
 
 > **Note:** Ensure your test dataset contains the `lang` column with the exact language codes you want to filter (e.g., `"es"`, `"ar"`, `"de"`). The evaluation engine will only compute metrics for rows where the mask evaluates to `True`.
+
+---
+
+## 👥 Contributors
+<table>
+  <tbody>
+    <tr>
+      <!-- Placeholder: Replace with actual contributors -->
+      <td align="center" align="top" width="14.28%" style="padding: 25px;">
+        <a href="https://github.com/Marouazzz">
+          <img src="https://avatars.githubusercontent.com/u/173569485?v=4" width="100px;" alt="Marouzz" style="border-radius: 50%;"/>
+          <br />
+          <sub><b>Marouazzz</b></sub>
+        </a>
+      </td>
+      <td align="center" valign="top" width="14.28%" style="padding: 25px;">
+        <a href="https://github.com/hajaryaz">
+          <img src="https://avatars.githubusercontent.com/u/199246801?v=4" width="100px;" alt="hajaryaz" style="border-radius: 50%;"/>
+          <br />
+          <sub><b>hajaryaz</b></sub>
+        </a>
+      </td>
+      <!-- Add more <td> blocks for additional contributors -->
+    </tr>
+  </tbody>
+</table>

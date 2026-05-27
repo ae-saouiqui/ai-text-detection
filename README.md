@@ -267,22 +267,21 @@ To evaluate performance on other languages present in your dataset, make two sma
 ---
 
 ## 👥 Contributors
-
-
-<table align="center">
+<table align="center" width="100%">
   <tbody>
     <tr>
-      <td align="center" width="5%">
+      <td align="center" width="50%">
         <a href="https://github.com/Marouazzz">
-        <!-- to remember  : Github renderer restrict some of css styling like border-radius, that why we used "images.wesery.nl" proxy to bypass the restriction -->
-          <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/173569485?v=4&w=100&h=100&fit=cover&mask=circle" width="100" alt="Marouazzz"/>
+        <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/173569485?v=4&w=100&h=100&fit=cover&mask=circle" width="100" alt="Marouazzz"/>
+          <br/>
           <br/>
           <sub><b>Marouazzz</b></sub>
         </a>
       </td>
-      <td align="center" width="5%">
+      <td align="center" width="50%">
         <a href="https://github.com/hajaryaz">
           <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/199246801?v=4&w=100&h=100&fit=cover&mask=circle" width="100" alt="hajaryaz"/>
+          <br/>
           <br/>
           <sub><b>hajaryaz</b></sub>
         </a>

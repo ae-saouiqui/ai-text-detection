@@ -284,7 +284,7 @@ To evaluate performance on other languages present in your dataset, make two sma
         <a href="https://github.com/hajaryaz">
           <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/199246801?v=4&w=120&h=120&fit=cover&mask=circle" width="120" alt="hajaryaz"/>
           <br/>
-          <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" width="402" height="1" />
+          <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" width="400" height="1" />
           <br/>
           <sub><b>hajaryaz</b></sub>
         </a>

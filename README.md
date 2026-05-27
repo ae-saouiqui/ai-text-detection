@@ -267,20 +267,22 @@ To evaluate performance on other languages present in your dataset, make two sma
 ---
 
 ## 👥 Contributors
+
 <table>
   <tbody>
     <tr>
-      <!-- Placeholder: Replace with actual contributors -->
-      <td align="center" align="top" width="14.28%" style="padding: 25px;">
+      <!-- Contributor 1 -->
+      <td align="center" valign="top" width="14.28%" style="padding: 20px;">
         <a href="https://github.com/Marouazzz">
-          <img src="https://avatars.githubusercontent.com/u/173569485?v=4" width="100px;" alt="Marouzz" style="border-radius: 50%;"/>
+          <img src="https://avatars.githubusercontent.com/u/173569485?v=4" width="100" alt="Marouzz" style="border-radius: 50%; border: 2px solid #e1e4e8;"/>
           <br />
           <sub><b>Marouazzz</b></sub>
         </a>
       </td>
-      <td align="center" valign="top" width="14.28%" style="padding: 25px;">
+      <!-- Contributor 2 -->
+      <td align="center" valign="top" width="14.28%" style="padding: 20px;">
         <a href="https://github.com/hajaryaz">
-          <img src="https://avatars.githubusercontent.com/u/199246801?v=4" width="100px;" alt="hajaryaz" style="border-radius: 50%;"/>
+          <img src="https://avatars.githubusercontent.com/u/199246801?v=4" width="100" alt="hajaryaz" style="border-radius: 50%; border: 2px solid #e1e4e8;"/>
           <br />
           <sub><b>hajaryaz</b></sub>
         </a>

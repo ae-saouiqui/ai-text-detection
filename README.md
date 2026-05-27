@@ -278,7 +278,6 @@ To evaluate performance on other languages present in your dataset, make two sma
           <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/173569485?v=4&w=120&h=120&fit=cover&mask=circle" width="120" alt="Marouazzz"/>
           <br/>
           <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" width="350" height="1" />
-        <br/>
         <a href="https://github.com/Marouazzz">Marouazzz</a>
       </td>
       <td align="center" width="50%">
@@ -287,7 +286,6 @@ To evaluate performance on other languages present in your dataset, make two sma
           <img src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/199246801?v=4&w=120&h=120&fit=cover&mask=circle" width="120" alt="hajaryaz"/>
           <br/>
           <img src="https://raw.githubusercontent.com/anuraghazra/github-readme-stats/master/themes/prod/transparent.png" width="350" height="1" />
-        <br/>
         <a href="https://github.com/hajaryaz">hajaryaz</a>
       </td>
     </tr>

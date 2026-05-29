@@ -174,7 +174,7 @@ The data ingestion layer expects a specific schema. Regardless of the file forma
 | :--- | :--- | :--- |
 | `text` | string | The raw sentence or document content to be classified. |
 | `label` | integer | Binary target: `0` for human-authored text, `1` for AI-generated text. |
-| `lang` | string | Language tag used by the evaluation engine to split metrics. Accepted values by default: `"en"`, `"fr"` `(you could add another for you own language just ensure adding its mask in the evaluation script). |
+| `lang` | string | Language tag used by the evaluation engine to split metrics. Accepted values by default: `"en"`, `"fr"` `(you could add another for you own language just ensure adding its mask in the evaluation script)`. |
 
 **Example (JSON format):**
 
